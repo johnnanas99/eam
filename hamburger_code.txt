@@ -1,0 +1,33 @@
+<template>
+
+<menu>
+    <label for="trigger">
+    <input id="trigger" type="checkbox">
+    <section class="drawer-list">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </section>
+    <hamburger> <i></i>
+      <text>
+        <close>close</close>
+        <open>menu</open>
+      </text>
+    </hamburger>
+    </label>
+</menu>
+</template>
+
+<style scoped>
+menu {
+    margin: 0;
+}
+menu, menu label {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+</style>
