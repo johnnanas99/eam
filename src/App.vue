@@ -1,25 +1,21 @@
 <template>
   <div id="app">
     <NavBarNew></NavBarNew>
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <NewHome></NewHome>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+//import HelloWorld from '@/components/HelloWorld.vue'
 import Manolis from '@/components/Manolis.vue'
 import NavBarNew from '@/components/NavBarNew.vue'
-
+import NewHome from '@/views/NewHome.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld , Manolis, NavBarNew
+   Manolis, NavBarNew, NewHome
   }
 }
 </script>
