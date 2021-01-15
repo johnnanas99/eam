@@ -1,11 +1,12 @@
 <template>
   <div id="app">
-    <NavBarNew></NavBarNew>
+    <NavBarNew/>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
+    <Footer/>
   </div>
 </template>
 
@@ -14,12 +15,13 @@
 import HelloWorld from '@/components/HelloWorld.vue'
 import Manolis from '@/components/Manolis.vue'
 import NavBarNew from '@/components/NavBarNew.vue'
+import Footer from '@/components/Footer.vue'
 
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld , Manolis, NavBarNew
+    HelloWorld , Manolis, NavBarNew , Footer
   }
 }
 </script>
