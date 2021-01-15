@@ -147,7 +147,7 @@
 #main {
   background-color : #E5E5E5;
   border-radius: 60px;
-  width: 20%;
+  width: 35%;
 }
 
 #submit {
