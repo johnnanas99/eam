@@ -5,13 +5,13 @@
 				<!-- <i class="fas fa-plus">EAM</i> -->
 				<router-link to="/">
 					<img src="../images/MainLogoArt.png" alt="logo" width="200px">
-				</router-link> |
+				</router-link>
 				
 			</b-navbar-brand>
 
 			<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 			<b-navbar-nav>
-				<b-nav-item-dropdown href="#" text="Είμαι εργαζόμενος">
+				<b-nav-item-dropdown href="#" text="Είμαι εργαζόμενος" class="nav-link active">
 					<div>
 						<b-dropdown-item href="#">Action</b-dropdown-item>
 						<b-dropdown-item href="#">Another action</b-dropdown-item>
@@ -21,10 +21,12 @@
 				<b-nav-item-dropdown
 					href="#"
 					text="Είμαι εργοδότης"
+					class="nav-link active"
 				></b-nav-item-dropdown>
 				<b-nav-item-dropdown
 					href="#"
 					text="Είμαι άνεργος"
+					class="nav-link active"
 				></b-nav-item-dropdown>
 			</b-navbar-nav>
 			<b-dropdown
