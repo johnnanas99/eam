@@ -24,7 +24,6 @@
           id="afm-input"
           v-model="form.afm"
           placeholder="Πληκτρολογίστε το ΑΦΜ"
-          required
         ></b-form-input>
       </b-form-group>
 
@@ -83,9 +82,18 @@
       }
     },
     methods: {
-      onSubmit(event) {
-        event.preventDefault()
-        alert("Το ραντευού κανονίνιστηκε για τις " + this.form.time + "!")
+      async onSubmit(event) {
+        event.preventDefault();
+        const { data } = await this.$axios.post('/rendezvous', this.form);
+        console.log(data.status);
+        if (data.status != 200){
+          alert("Κάτι πήγε στραβά, παρακαλώ προσπαθήστε αργότερα!");
+          return;
+        }
+        alert("Το ραντευού κανονίνιστηκε για τις " + this.form.date + " " + this.form.time + "!");
+        this.form.date = null;
+        this.form.time = null;
+        this.alltimes = null;
       },
       onReset(event) {
         event.preventDefault()
