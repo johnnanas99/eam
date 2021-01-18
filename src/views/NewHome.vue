@@ -1,8 +1,5 @@
 <template>
   <div class="NewHome">
-    <head>
- 	    <title>Υπουργείο Εργασίας και Κοινωνικών υποθέσεων</title>
- 	</head>
 
         <section id="topfold">
             <a href="#">
@@ -38,6 +35,7 @@
                         <a href="faq.html">περισσότερα...</a>
                     </ol>
                 </div>
+                
             </div>
 	</section>
     
@@ -47,6 +45,8 @@
             <li> Ανακοίνωση 1</li>
             <li> Ανακοίνωση 2</li>
             <li> Ανακοίνωση 3</li>
+            <li> </li>
+            <li> </li>
         </ul>
     </block>
   </div>
@@ -146,5 +146,6 @@ a.button {
   	margin: 15px;
   	box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
 }
+
 
 </style>
