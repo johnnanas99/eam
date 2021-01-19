@@ -5,15 +5,17 @@ import About from '@/views/About.vue'
 import Register from '@/views/Register.vue'
 import Login from '@/views/Login.vue'
 import Rendezvous from '@/views/Rendezvous.vue'
+import NewHome from '@/views/NewHome.vue'
+
 
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
+  // {
+  //   path: '/',
+  //   name: 'Home',
+  //   component: Home
+  // },
   {
     path: '/about',
     name: 'About',
@@ -36,6 +38,11 @@ const routes = [
     path: '/rendezvous',
     name: 'Rendezvous',
     component: Rendezvous
+  },
+  {
+    path: '/',
+    name: 'Home',
+    component: NewHome
   }
 ]
 

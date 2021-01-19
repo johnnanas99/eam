@@ -25,7 +25,7 @@ import Footer from '@/components/Footer.vue'
 export default {
   name: 'Home',
   components: {
-    HelloWorld , Manolis, NavBarNew , Footer
+   Manolis, NavBarNew , Footer
   }
 }
 </script>

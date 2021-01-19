@@ -18,9 +18,7 @@
                 <br>
                 Εξυπηρέτηση κοινού <strong>μόνο</strong> κατόπιν ραντεβού.
                 <br>
-                <a href="rantevou.html">
-                    Κλείστε ραντεβού ηλεκτρονικά.
-                </a>
+                <router-link to="/rendezvous">Κλείστε ραντεβού ηλεκτρονικά.</router-link>
             </div>
             </div>
             <div id="generalinfo">
