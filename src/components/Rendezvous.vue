@@ -85,7 +85,6 @@
       async onSubmit(event) {
         event.preventDefault();
         const { data } = await this.$axios.post('/rendezvous', this.form);
-        console.log(data.status);
         if (data.status != 200){
           alert("Κάτι πήγε στραβά, παρακαλώ προσπαθήστε αργότερα!");
           return;

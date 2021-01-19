@@ -63,28 +63,15 @@
           id="phone-input"
           v-model="form.phone"
           placeholder="Αριθμός τηλεφώνου"
-          required
         ></b-form-input>
       </b-form-group>
 
-      <b-form-group id="role" label="Role:" label-for="role-input">
-        <b-form-select
-          id="role-input"
-          v-model="form.role"
-          :options="role"
-          required
-        ></b-form-select>
-      </b-form-group>
-
-      <b-form-group id="checkboxes" v-slot="{ ariaDescribedby }">
-        <b-form-checkbox-group
-          v-model="form.checked"
-          id="checkboxes"
-          :aria-describedby="ariaDescribedby"
-        >
-          <b-form-checkbox value="me">Check me out</b-form-checkbox>
-          <b-form-checkbox value="that">Check that out</b-form-checkbox>
-        </b-form-checkbox-group>
+      <b-form-group id="address" label="Διεύθυνση 1ης Κατοικίας" label-for="address-input">
+        <b-form-input
+          id="address-input"
+          v-model="form.address"
+          placeholder="Οδός αριθμός Δημος"
+        ></b-form-input>
       </b-form-group>
 
       <b-button id="submit" class="button" type="submit">Submit</b-button>
@@ -104,35 +91,42 @@
           password: '',
           password2: '',
           email: '',
-          phone: '',
-          role: null,
-          checked: []
+          phone: null,
+          address: null,
         },
-        role: [{ text: 'Select role', value: null }, 'Worker', 'Employer'],
         show: true
       }
     },
     methods: {
-      onSubmit(event) {
+      async onSubmit(event) {
         event.preventDefault()
         if (this.form.password != this.form.password2){
           alert("Οι κωδικοί πρόσβασης δεν ταιρίαζουν! Πληκτρολογίστε τους ξανά.")
           return
         }
-        alert(JSON.stringify(this.form))
+        const { data } = await this.$axios.post('/register', this.form);
+        if (data.status == 404){
+          alert("Δεν είστε καταχωρημένος στην βάση. Αν τα στοιχεία που δώσατε είναι σωστά,επικοινωνήστε μαζί μας!")
+        }else if(data.status == 500){
+          alert("Κάτι πήγε στραβά, παρακαλώ προσπαθήστε αργότερα!");
+        }else if(data.status == 1062){
+          alert("Ο λογαριασμός υπάρχει. Μήπως θέλετε να συνδεθείτε;");
+        }else{
+          alert("Η εγγραφή σας ολοκληρώθηκε επιτυχώς! Συνδεθείτε για να αποκτήσετε πρόσβαση στον λογαριασμό σας!")
+          this.$router.push('/login');
+        }
       },
       onReset(event) {
         event.preventDefault()
         // Reset our form values
-        this.form.name = ''
+        this.form.firstname = ''
         this.form.lastname = ''
         this.form.afm = ''
         this.form.password = ''
         this.form.password2 = ''
         this.form.email = ''
-        this.form.phone = ''
-        this.form.food = null
-        this.form.checked = []
+        this.form.phone = null
+        this.form.address = null
         // Trick to reset/clear native browser form validation state
         this.show = false
         this.$nextTick(() => {
