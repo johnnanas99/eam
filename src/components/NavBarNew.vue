@@ -4,14 +4,14 @@
 			<b-navbar-brand href="#">
 				<!-- <i class="fas fa-plus">EAM</i> -->
 				<router-link to="/">
-					<img src="../images/MainLogoArt.png" alt="logo" width="200px">
-				</router-link>
+					<img src="https://artandcultureprofessionals.services.gov.gr/MainLogoArt.gif" alt="logo" width="200px">
+				</router-link> |
 				
 			</b-navbar-brand>
 
 			<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 			<b-navbar-nav>
-				<b-nav-item-dropdown href="#" text="Είμαι εργαζόμενος" class="nav-link active">
+				<b-nav-item-dropdown href="#" text="Εργαζόμενοι">
 					<div>
 						<b-dropdown-item href="#">Action</b-dropdown-item>
 						<b-dropdown-item href="#">Another action</b-dropdown-item>
@@ -20,13 +20,11 @@
 				</b-nav-item-dropdown>
 				<b-nav-item-dropdown
 					href="#"
-					text="Είμαι εργοδότης"
-					class="nav-link active"
+					text="Εργοδότες"
 				></b-nav-item-dropdown>
 				<b-nav-item-dropdown
 					href="#"
-					text="Είμαι άνεργος"
-					class="nav-link active"
+					text="Άνεργοι"
 				></b-nav-item-dropdown>
 			</b-navbar-nav>
 			<b-dropdown
@@ -47,7 +45,43 @@
 					>Something else here...</b-dropdown-item
 				>
 			</b-dropdown>
+			<div class="rcorner_top">
+				<a href="login.html">Σύνδεση</a>
+				//
+				<a href="signup.html">Εγγραφή</a>
+				<a href="contact.html">
+					<img class="icon" src="https://p7.hiclipart.com/preview/826/886/420/iphone-computer-icons-telephone-call-phone-call-icon.jpg">
+		        </a>
+				
+				
+				<b-dropdown id="dropdown-right" right text="Right align" variant="primary" class="m-2">
+					<i class="fa fa-bars" aria-hidden="true"></i>
+					<b-dropdown-item href="#">Action</b-dropdown-item>
+					<b-dropdown-item href="#">Another action</b-dropdown-item>
+					<b-dropdown-item href="#">Something else here</b-dropdown-item>
+				</b-dropdown> 
+				<menu>
+    <label for="trigger">
+    <input id="trigger" type="checkbox">
+    <section class="drawer-list">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </section>
+    <hamburger> <i></i>
+      <text>
+        <close>close</close>
+        <open>menu</open>
+      </text>
+    </hamburger>
+    </label>
+</menu>
+			</div>
 		</b-navbar>
+			
 	</div>
 </template>
 
@@ -60,10 +94,55 @@ export default {
 <style scoped>
 
 img {
-  border-radius: 50px;
+	width:300px;
+	height:auto;
+	border-radius: 50px;
 }
 
-.icon {
+/*.icon {
 	color: white;
+}*/
+.icon{
+	width: 80px;
+	height: auto;
+	border-radius: 50%;
+	/*box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);*/
+	padding: 10px;
+}
+
+
+/*.b-navbar-nav{
+	color: whitesmoke;
+}*/
+
+b-nav-item-dropdown.text{
+	color:whitesmoke;
+}
+
+b-navbar{
+	font-size:20px;
+	background: #2D9BB2;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.rcorner_top{
+	/*display: inline;
+	text-align: center;*/
+	display: flex;
+	align-items:center;
+	padding: 10px;
+	font-size: 20px;
+	color:#E5E5E5;
+}
+menu {
+    margin: 0;
+}
+menu, menu label {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 </style>
