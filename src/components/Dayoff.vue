@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-form id="main" class="container mt-5 d-flex  flex-column max-width-200" @submit="onSubmit" @reset="onReset" v-if="show">
-      <h5>Δήλωση εργαζομένου σε αναστολή/άδεια ειδικού σκοπού</h5>
+      <h5>Δήλωση εργαζομένου σε αναστολή<br> ή άδεια ειδικού σκοπού</h5>
       <b-form-group id="firstname" label="Όνομα εργαζομένου" label-for="firstname-input">
         <b-form-input
           id="firstname-input"
