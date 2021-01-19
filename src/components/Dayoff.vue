@@ -109,7 +109,9 @@
         this.form.startdate = null;
         this.form.enddate = null;
         this.form.type = null;
-        this.dayoff_types = null;
+        this.dayoff_types = [
+        'Αναστολή εργασίας',
+        'Άδεια ειδικού σκοπού'];
       },
       onReset(event) {
         event.preventDefault()
@@ -122,33 +124,12 @@
         this.form.startdate = null
         this.form.enddate = null
         this.form.type = null
-        this.dayoff_types = null
         // Trick to reset/clear native browser form validation state
         this.show = false
         this.$nextTick(() => {
           this.show = true
         })
       },
-      async types(event) {
-        this.dayoff_types =  [
-        'Αναστολή εργασίας',
-        'Άδεια ειδικού σκοπού'];
-        let params = {
-          Date : this.form.startdate,
-          Date : this.form.enddate,
-        }
-        
-        const { data } = await this.$axios.get('/dayoff', {
-					params,
-        });
-        for (let i in data.types){
-          var index = this.dayoff_types.indexOf(data.types[i]);
-          if (index !== -1) {
-            this.dayoff_types.splice(index, 1);
-          }
-        }
-        this.form.type = null;
-      }
     }
   }
 </script>
