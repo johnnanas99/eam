@@ -52,7 +52,7 @@
 			<div class="rcorner_top">
 				<a href="login.html">Σύνδεση </a>
 				 // 
-				<a href="signup.html"> Εγγραφή</a>
+				<router-link to="/register">Εγγραφή</router-link>
 				<a href="contact.html">
 					<img class="icon" src="https://p7.hiclipart.com/preview/826/886/420/iphone-computer-icons-telephone-call-phone-call-icon.jpg">
 		        </a>
