@@ -23,16 +23,18 @@
       <b-form-group id="AFM" label="ΑΦΜ Εργαζομένου" label-for="afm-input">
         <b-form-input
           id="afm-input"
-          v-model="form.afmergazomenou"
+          v-model="form.person_id"
           placeholder="Πληκτρολογήστε τον ΑΦΜ του εργαζομένου"
+          required
         ></b-form-input>
       </b-form-group>
 
       <b-form-group id="AFM" label="ΑΦΜ Επιχείρησης" label-for="afm-input">
         <b-form-input
           id="afm-input"
-          v-model="form.afmepixeirisis"
+          v-model="form.work_id"
           placeholder="Πληκτρολογήστε τον ΑΦΜ της επιχείρησης"
+          required
         ></b-form-input>
       </b-form-group>
 
@@ -54,12 +56,12 @@
       </b-form-group>
 
       <b-form-group id="startDate" label="Ημερομηνία έναρξης" label-for="date-input">
-        <b-form-datepicker id="datepicker" v-model="form.startdate" class="mb-2" @input="types"></b-form-datepicker>
+        <b-form-datepicker id="datepicker" v-model="form.startdate" class="mb-2"></b-form-datepicker>
       </b-form-group>
 
         <b-form-group id="endDate" label="Ημερομηνία ολοκλήρωσης" label-for="date-input" 
       description="Επιλέξτε στην περίπτωση άδειας ειδικού σκοπού.">
-        <b-form-datepicker id="datepicker" v-model="form.enddate" class="mb-2" @input="times"></b-form-datepicker>
+        <b-form-datepicker id="datepicker" v-model="form.enddate" class="mb-2"></b-form-datepicker>
       </b-form-group>
 
       <b-form-group id="type" label="Αιτιολογία" label-for="type-input">

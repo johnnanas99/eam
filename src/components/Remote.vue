@@ -23,16 +23,18 @@
       <b-form-group id="AFM" label="ΑΦΜ Εργαζομένου" label-for="afm-input">
         <b-form-input
           id="afm-input"
-          v-model="form.afmergazomenou"
+          v-model="form.person_id"
           placeholder="Πληκτρολογήστε τον ΑΦΜ του εργαζομένου"
+          required
         ></b-form-input>
       </b-form-group>
 
       <b-form-group id="AFM" label="ΑΦΜ Επιχείρησης" label-for="afm-input">
         <b-form-input
           id="afm-input"
-          v-model="form.afmepixeirisis"
+          v-model="form.work_id"
           placeholder="Πληκτρολογήστε τον ΑΦΜ της επιχείρησης"
+          required
         ></b-form-input>
       </b-form-group>
 
@@ -54,12 +56,12 @@
       </b-form-group>
 
       <b-form-group id="startDate" label="Ημερομηνία έναρξης" label-for="date-input">
-        <b-form-datepicker id="datepicker" v-model="form.startdate" class="mb-2" @input="times"></b-form-datepicker>
+        <b-form-datepicker id="datepicker" v-model="form.startdate" class="mb-2" required></b-form-datepicker>
       </b-form-group>
       
       <b-form-group id="endDate" label="Ημερομηνία ολοκλήρωσης" label-for="date-input" 
       description="Αν δεν είστε σίγουρος/η, επιλέξτε ενδεικτικά. Μπορείτε να κάνετε ξανά δήλωση εργαζομένου μετά το πέρας της περιόδου">
-        <b-form-datepicker id="datepicker" v-model="form.enddate" class="mb-2" @input="times"></b-form-datepicker>
+        <b-form-datepicker id="datepicker" v-model="form.enddate" class="mb-2" required></b-form-datepicker>
       </b-form-group>
 
       <b-button id="submit" class="button" type="submit">Submit</b-button>
@@ -75,8 +77,8 @@
         form: {
           firstname: '',
           lastname: '',
-          afmergazomenou: '',
-          afmepixeirisis: '',
+          person_id: '',
+          work_id: '',
           email: '',
           phone: '',
           startdate: null,
@@ -113,17 +115,6 @@
         this.$nextTick(() => {
           this.show = true
         })
-      },
-      async times(event) {
-        let params = {
-          Date : this.form.startdate, 
-          Date : this.form.enddate,
-        }
-        
-        const { data } = await this.$axios.get('/remote', {
-					params,
-        });
-        this.form.time = null;
       }
     }
   }
