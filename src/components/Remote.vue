@@ -49,7 +49,7 @@
         <b-form-input
           id="phone-input"
           v-model="form.phone"
-          placeholder="Πληκτρολογήστε προαιρετικά έναν αριθμό τηλεφώνου"
+          placeholder="Πληκτρολογήστε έναν αριθμό τηλεφώνου"
         ></b-form-input>
       </b-form-group>
 
