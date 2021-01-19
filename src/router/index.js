@@ -6,6 +6,7 @@ import Register from '@/views/Register.vue'
 import Login from '@/views/Login.vue'
 import Rendezvous from '@/views/Rendezvous.vue'
 import NewHome from '@/views/NewHome.vue'
+import Covid19 from '@/views/Covid19.vue'
 
 
 Vue.use(VueRouter)
@@ -43,6 +44,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: NewHome
+  },
+  {
+    path: '/covid19',
+    name: 'Covid19',
+    component: Covid19
   }
 ]
 

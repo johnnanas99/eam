@@ -6,9 +6,11 @@
                 <img id="covid_image" src="https://www.aade.gr/sites/default/files/inline-images/menoume_spiti_01.png">
             </a>
             <div id="covid_info">
-            <a href="#" class="button">
-                Κορωνοϊός covid-19: Τι πρέπει να γνωρίζετε
-            </a>
+            <router-link to='/covid19'>
+                <a href="#" class="button">
+                    Κορωνοϊός covid-19: Τι πρέπει να γνωρίζετε
+                </a>
+            </router-link>
             <br>
             <div id="hlektronikes_ait">Μένουμε ασφαλείς, Κάνουμε 
                 <a href="aithseis.html">
