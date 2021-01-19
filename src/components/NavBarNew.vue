@@ -4,7 +4,7 @@
 			<b-navbar-brand href="#">
 				<!-- <i class="fas fa-plus">EAM</i> -->
 				<router-link to="/">
-					<img src="https://artandcultureprofessionals.services.gov.gr/MainLogoArt.gif" alt="logo" width="200px">
+					<img src="https://artandcultureprofessionals.services.gov.gr/MainLogoArt.gif" alt="logo" width="220px">
 				</router-link> |
 				
 			</b-navbar-brand>
@@ -13,13 +13,9 @@
 			<b-navbar-nav>
 				<b-nav-item-dropdown href="#" text="Εργαζόμενοι">
 					<div>
-						<b-dropdown-item href="#">Action</b-dropdown-item>
-						<b-dropdown-item href="#"
-							>Another action</b-dropdown-item
-						>
-						<b-dropdown-item href="#"
-							>Something else here</b-dropdown-item
-						>
+						<b-dropdown-item href="#">Αναζήτηση αρχείου εργαζομένου</b-dropdown-item>
+						<b-dropdown-item href="#">Αιτήσεις και έντυπα</b-dropdown-item>
+						<b-dropdown-item href="#">Covid-19</b-dropdown-item>
 					</div>
 				</b-nav-item-dropdown>
 				<b-nav-item-dropdown
@@ -30,6 +26,17 @@
 					href="#"
 					text="Άνεργοι"
 				></b-nav-item-dropdown>
+				<b-nav-item-dropdown href="#" text="Γενικά">
+					<div>
+						<b-dropdown-item href="#">Ανακοινώσεις</b-dropdown-item>
+						<b-dropdown-item href="#">Αιτήσεις και έντυπα</b-dropdown-item>
+						<b-dropdown-item href="#">Εγκύκλιοι και γενικά θέματα</b-dropdown-item>
+						<b-dropdown-item href="#">Διεθνή θέματα</b-dropdown-item>
+						<b-dropdown-item href="#">Συχνές ερωτήσεις</b-dropdown-item>
+						<b-dropdown-item href="#">Επικοινωνία/Αναφορά σφάλματος</b-dropdown-item>
+					</div>
+
+				</b-nav-item-dropdown>
 			</b-navbar-nav>
 			<b-dropdown
 				style="margin-left: auto"
@@ -71,7 +78,6 @@ export default {
 <style scoped>
 
 img {
-	width:300px;
 	height:auto;
 	border-radius: 50px;
 }
@@ -80,7 +86,7 @@ img {
 	color: white;
 }*/
 .icon{
-	width: 80px;
+	width: 75px;
 	height: auto;
 	border-radius: 50%;
 	/*box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);*/
@@ -110,7 +116,7 @@ b-navbar{
 	display: flex;
 	align-items:center;
 	padding: 10px;
-	font-size: 20px;
+	font-size: 18px;
 	color:#E5E5E5;
 }
 a{
