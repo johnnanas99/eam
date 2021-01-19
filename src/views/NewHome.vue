@@ -6,9 +6,8 @@
                 <img id="covid_image" src="https://www.aade.gr/sites/default/files/inline-images/menoume_spiti_01.png">
             </a>
             <div id="covid_info">
-            <a href="#" class="button">
-                Κορωνοϊός covid-19: Τι πρέπει να γνωρίζετε
-            </a>
+            <router-link to="/covid19" class="button"> Κορωνοϊός covid-19: Τι πρέπει να γνωρίζετε</router-link>
+               
             <br>
             <div id="hlektronikes_ait">Μένουμε ασφαλείς, Κάνουμε 
                 <a href="aithseis.html">
@@ -19,6 +18,7 @@
                 Εξυπηρέτηση κοινού <strong>μόνο</strong> κατόπιν ραντεβού.
                 <br>
                 <a href="rantevou.html">
+                
                     Κλείστε ραντεβού ηλεκτρονικά.
                 </a>
             </div>
@@ -26,13 +26,13 @@
             <div id="generalinfo">
                 <div id="home_faq">
                     <ol>
-                        <h2>Συχνές ερωτήσεις</h2>
-                        <li> Πώς μπορώ να υπολογίσω πόσες μέρες άδειας δικαιούμαι ;</li>
+                        <router-link to="/faq" class="h2">Συχνές ερωτήσεις</router-link>
+                        
+                        <li> <router-link to="/faq">Πόσες μέρες άδειας δικαιούμαι ;</router-link></li>
                         <li> Τι έγγραφα πρέπει να συμπληρώσω για το επίδομα αναστολής εργασίας ;</li>
                         <li> link 3</li>
                         <li> link 4</li>
-                        <br>
-                        <a href="faq.html">περισσότερα...</a>
+                        
                     </ol>
                 </div>
                 
@@ -42,7 +42,7 @@
     <block id="bottomfold">
         <h2>Ανακοινώσεις</h2>
         <ul>
-            <li> Ανακοίνωση 1</li>
+            <li> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus nostrum, unde magnam impedit voluptatem, illo, laborum quae doloribus animi saepe reiciendis modi explicabo! Accusantium repellendus voluptas architecto at rem earum.</li>
             <li> Ανακοίνωση 2</li>
             <li> Ανακοίνωση 3</li>
             <li> </li>
@@ -71,7 +71,8 @@ li{
 	max-width: 500px;
 }
 
-h2{
+h2, .h2, a.ol{
+    color:#2c3e50;
 	padding: 5px;
     padding-left: 25px;
 	
@@ -146,6 +147,5 @@ a.button {
   	margin: 15px;
   	box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
 }
-
 
 </style>
