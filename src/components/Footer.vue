@@ -1,6 +1,6 @@
 <template>
 	<div style="bottom: 0px; position:relative; width:100%;">
-		<b-navbar toggleable="lg" type="dark" variant="info" style="height:100px;">
+		<b-navbar toggleable="lg" type="dark" variant="info" style="height:100px;" id="footernav">
 			<div style="position: absolute; top: 8px; left: 16px;">
 				<!-- <i class="fas fa-plus">EAM</i> -->
                 <ul style="list-style-type:none;">
@@ -54,4 +54,8 @@ li {
     margin-right: 20px;
     padding-left: 5px;
 }
+#footernav{
+	margin-top: 30%;
+}
+
 </style>
