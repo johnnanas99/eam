@@ -7,6 +7,7 @@ import Login from '@/views/Login.vue'
 import Rendezvous from '@/views/Rendezvous.vue'
 import NewHome from '@/views/NewHome.vue'
 import Covid19 from '@/views/Covid19.vue'
+import Contact from '@/views/Contact.vue'
 
 
 Vue.use(VueRouter)
@@ -49,6 +50,11 @@ const routes = [
     path: '/covid19',
     name: 'Covid19',
     component: Covid19
+  },
+  {
+    path: '/contact',
+    name: 'name',
+    component: Contact
   }
 ]
 
