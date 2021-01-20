@@ -57,7 +57,7 @@
 				>
 			</b-dropdown>
 			<div class="rcorner_top">
-				<a href="login.html">Σύνδεση </a>
+				<router-link to="/login">Σύνδεση </router-link>
 				 // 
 				<router-link to="/register">Εγγραφή</router-link>
 				<a href="contact.html">

@@ -36,23 +36,6 @@
         ></b-form-input>
       </b-form-group>
 
-      <b-form-group id="email" label="Email" label-for="email-input">
-        <b-form-input
-          id="email-input"
-          v-model="form.email"
-          type="email"
-          placeholder="Πληκτρολογήστε το email σας για επιβεβαίωση"
-        ></b-form-input>
-      </b-form-group>
-
-      <b-form-group id="phone" label="Τηλέφωνο επικοινωνίας" label-for="phone-input">
-        <b-form-input
-          id="phone-input"
-          v-model="form.phone"
-          placeholder="Πληκτρολογήστε έναν αριθμό τηλεφώνου"
-        ></b-form-input>
-      </b-form-group>
-
       <b-form-group id="startDate" label="Ημερομηνία έναρξης" label-for="date-input">
         <b-form-datepicker id="datepicker" v-model="form.start_date" class="mb-2" required></b-form-datepicker>
       </b-form-group>

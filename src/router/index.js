@@ -1,7 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '@/views/Home.vue'
-import About from '@/views/About.vue'
 import Register from '@/views/Register.vue'
 import Login from '@/views/Login.vue'
 import Rendezvous from '@/views/Rendezvous.vue'
@@ -9,22 +7,18 @@ import NewHome from '@/views/NewHome.vue'
 import Covid19 from '@/views/Covid19.vue'
 import Dayoff from '@/views/Dayoff.vue'
 import Remote from '@/views/Remote.vue'
+import Forms from '@/views/Forms.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
-  // {
-  //   path: '/',
-  //   name: 'Home',
-  //   component: Home
-  // },
+  // route level code-splitting
+  // this generates a separate chunk (about.[hash].js) for this route
+  // which is lazy-loaded when the route is visited.
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: About
+    path: '/',
+    name: 'Home',
+    component: NewHome
   },
   {
     path: '/register',
@@ -42,11 +36,6 @@ const routes = [
     component: Rendezvous
   },
   {
-    path: '/',
-    name: 'Home',
-    component: NewHome
-  },
-  {
     path: '/covid19',
     name: 'Covid19',
     component: Covid19
@@ -60,6 +49,11 @@ const routes = [
     path: '/remote',
     name: 'Remote',
     component: Remote
+  },
+  {
+    path: '/forms',
+    name: 'Forms',
+    component: Forms
   }
 ]
 

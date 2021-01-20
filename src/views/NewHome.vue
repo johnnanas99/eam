@@ -10,9 +10,9 @@
                
             <br>
             <div id="hlektronikes_ait">Μένουμε ασφαλείς, Κάνουμε 
-                <a href="aithseis.html">
+                <router-link to="/forms">
                     ηλεκτρονικές αιτήσεις.
-                </a>
+                </router-link>
                 <br>
                 <br>
                 Εξυπηρέτηση κοινού <strong>μόνο</strong> κατόπιν ραντεβού.
