@@ -69,64 +69,12 @@
 </template>
 
 <script>
-    
 export default {
     data() {
       return {
       }
-    },
-	methods: {
-		expandcontent() {
-            document.querySelectorAll('.accordion__button').forEach(button=>{
-            button.addEventListener('click',()=>{
-                const accordionContent = button.nextElementSibling;
-
-                button.classList.toggle('accordion__button--active');
-
-                if (button.classList.contains('accordion__button--active')){
-                    accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-                } else {
-                    accordionContent.style.maxHeight = 0;
-                }
-            });
-           });
-           
-	    }
     }
 }
-/*export default {
-    methods: {
-        expandcontent() {
-            const accordionContent = button.nextElementSibling;
-            button.classList.toggle('accordion__button--active');
-            if (button.classList.contains('accordion__button--active')){
-                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-            } else {
-                accordionContent.style.maxHeight = 0;
-            }
-        }
-    }
-}*/
-
-/*export default {
-    data () {
-        return {
-            clicked : false
-        }
-    },
-    methods: {
-        expandcontent() {
-
-            if (this.clicked == false){
-                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-                clicked = true;
-            } else {
-                accordionContent.style.maxHeight = 0;
-                clicked = false;
-            }
-        }
-    }
-}*/
 </script>
 
 <style scoped>
