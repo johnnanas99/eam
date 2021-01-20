@@ -23,7 +23,7 @@
             <div id="generalinfo">
                 <div id="home_faq">
                     <ol>
-                        <router-link to="/faq" class="h2">Συχνές ερωτήσεις</router-link>
+                        <router-link to="/faq"><h2>Συχνές ερωτήσεις</h2></router-link>
                         
                         <li> <router-link to="/faq">Πόσες μέρες άδειας δικαιούμαι ;</router-link></li>
                         <li> Τι έγγραφα πρέπει να συμπληρώσω για το επίδομα αναστολής εργασίας ;</li>
@@ -68,11 +68,11 @@ li{
 	max-width: 500px;
 }
 
-h2, .h2, ol a{
+h2, ol a{
     color:#2c3e50;
 }
 
-h2, .h2{
+h2{
 	padding: 5px;
 	padding-left: 25px;
 }
@@ -130,6 +130,7 @@ section{
 ol{
 	border: 8px solid white;
 	padding: 10px;
+	margin-right: -6%;
 }
 
 a.button {
