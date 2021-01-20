@@ -6,7 +6,7 @@
                 <ul style="list-style-type:none;">
                     <li>
                         <router-link to="/">
-                            <img src="../images/small_logo.png" alt="logo" width="50px" height="50px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Coat_of_arms_of_Greece.svg/200px-Coat_of_arms_of_Greece.svg.png" alt="logo" width="50px" height="50px">
                         </router-link>
                     </li>
                     <li>
@@ -38,19 +38,15 @@ export default {
 </script>
 
 <style scoped>
-
 img {
   border-radius: 50px;
 }
-
 .icon {
 	color: white;
 }
-
 li {
     color: white;
 }
-
 .list {
     list-style-type: none;
     border-left: solid 1px;
@@ -58,6 +54,4 @@ li {
     margin-right: 20px;
     padding-left: 5px;
 }
-
-
 </style>
