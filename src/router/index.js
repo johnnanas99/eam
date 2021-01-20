@@ -8,6 +8,7 @@ import Covid19 from '@/views/Covid19.vue'
 import Dayoff from '@/views/Dayoff.vue'
 import Remote from '@/views/Remote.vue'
 import Forms from '@/views/Forms.vue'
+import Contact from '@/views/Contact.vue'
 
 Vue.use(VueRouter)
 
@@ -54,6 +55,11 @@ const routes = [
     path: '/forms',
     name: 'Forms',
     component: Forms
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: Contact
   }
 ]
 

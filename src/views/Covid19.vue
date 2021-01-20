@@ -1,7 +1,7 @@
 <template>
     <div id="covid">
     <h4>Γενικές οδηγίες ασφαλείας κατά του covid-19</h4>
-    <block  id="covid_instructions">
+    <div class="block"  id="covid_instructions">
         <img id="covid_mask" src="https://www.uoi.gr/wp-content/uploads/2020/09/mask-ti-den_post.png">
         
         <ol>
@@ -12,8 +12,8 @@
             <li>  Impedit, earum laboriosam? Rerum iste accusantium quasi quod sed vitae neque.</li>
         </ol>
         <img src="https://www.civilprotection.gr/sites/default/gscp_uploads/resize/covid/1135-800x800.jpeg">
-    </block>
-    <block class="covidfaq">
+    </div>
+    <div class="covidfaq block">
         <div class="faqcolumn"> <h4>Για τους εργαζόμενους :</h4>
             <div class="accordion">
                 <b-button type="button" class="accordion__button" v-b-toggle.collapse-1>Question</b-button>
@@ -40,10 +40,10 @@
                     </b-collapse>
             </div>
         </div>
-    </block>
+    </div>
 
 
-    <block id="covid_generalinfo">
+    <div class="block" id="covid_generalinfo">
         <div class="accordion" id="bottom"> <h4>Γενικές πληροφορίες: </h4>
                 <b-button type="button" class="accordion__button"  v-b-toggle.collapse-4>Τι είναι ο κορωνοϊός SARS-Cov-19 ;</b-button>
                 <b-collapse id="collapse-4" class="mt-2">
@@ -64,7 +64,7 @@
                     </p>
                 </b-collapse>
         </div>
-    </block>
+    </div>
     </div>
 </template>
 
@@ -167,7 +167,7 @@ export default {
        
    }
 
-    block{
+    .block{
         padding: 50px 20px 30px;
         justify-content:space-around;
         display: flex;

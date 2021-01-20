@@ -60,9 +60,9 @@
 				<router-link to="/login">Σύνδεση </router-link>
 				 // 
 				<router-link to="/register">Εγγραφή</router-link>
-				<a href="contact.html">
+				<router-link to="/contact">
 					<img class="icon" src="https://p7.hiclipart.com/preview/826/886/420/iphone-computer-icons-telephone-call-phone-call-icon.jpg">
-		        </a>
+				</router-link>
 			</div>
 		</b-navbar>
 			

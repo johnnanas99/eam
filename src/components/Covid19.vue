@@ -1,14 +1,14 @@
 <template>
     <div id="covid">
     <h4>Γενικές οδηγίες ασφαλείας κατά του covid-19</h4>
-    <block  id="covid_instructions">
+    <div class="block"  id="covid_instructions">
         <img id="covid_mask" src="https://www.uoi.gr/wp-content/uploads/2020/09/mask-ti-den_post.png">
         
         <img id="instr" >
         <img id="instr" >
         <img src="https://www.civilprotection.gr/sites/default/gscp_uploads/resize/covid/1135-800x800.jpeg">
-    </block>
-    <block class="covidfaq">
+    </div>
+    <div  class="covidfaq block">
         <div class="faqcolumn"> <h4>Για τους εργαζόμενους :</h4>
             <div class="accordion">
                 <button type="button" class="accordion__button" v-on:click="expandcontent">Question</button>
@@ -35,10 +35,10 @@
                     </div>
             </div>
         </div>
-    </block>
+    </div>
 
 
-    <block id="covid_generalinfo">
+    <div class = "block" id="covid_generalinfo">
         <div class="accordion" id="bottom"> <h4>Γενικές πληροφορίες: </h4>
                 <button type="button" class="accordion__button" v-on:click="expandcontent">Τι είναι ο κορωνοϊός SARS-Cov-19 ;</button>
                     <div class="accordion__content">
@@ -59,7 +59,7 @@
                         </p>
                     </div>
             </div>
-    </block>
+    </div>
     </div>
 </template>
 
@@ -67,57 +67,8 @@
     
 export default {
 	methods: {
-		expandcontent() {
-            document.querySelectorAll('.accordion__button').forEach(button=>{
-            button.addEventListener('click',()=>{
-                const accordionContent = button.nextElementSibling;
-
-                button.classList.toggle('accordion__button--active');
-
-                if (button.classList.contains('accordion__button--active')){
-                    accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-                } else {
-                    accordionContent.style.maxHeight = 0;
-                }
-            });
-           });
-           
-	    }
     }
 }
-/*export default {
-    methods: {
-        expandcontent() {
-            const accordionContent = button.nextElementSibling;
-            button.classList.toggle('accordion__button--active');
-            if (button.classList.contains('accordion__button--active')){
-                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-            } else {
-                accordionContent.style.maxHeight = 0;
-            }
-        }
-    }
-}*/
-
-/*export default {
-    data () {
-        return {
-            clicked : false
-        }
-    },
-    methods: {
-        expandcontent() {
-
-            if (this.clicked == false){
-                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-                clicked = true;
-            } else {
-                accordionContent.style.maxHeight = 0;
-                clicked = false;
-            }
-        }
-    }
-}*/
 </script>
 
 <style scoped>
@@ -158,7 +109,7 @@ export default {
        
    }
 
-    block{
+    .block{
         padding: 50px 20px 30px;
         justify-content:space-around;
         display: flex;
