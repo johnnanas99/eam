@@ -1,18 +1,6 @@
 <template>
   <div id="app">
     <NavBarNew/>
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/register">Register</router-link> |
-      <router-link to="/login">Login</router-link> |
-      <router-link to="/rendezvous">Rendezvous</router-link> |
-      <router-link to="/day_off">Day off</router-link> |
-      <router-link to="/remote">Remote</router-link> |
-      <router-link to="/covid19">Covid19</router-link> |
-      <router-link to="/forms">Forms</router-link>
-
-
-    </div>
     <router-view/>
     <Footer/>
   </div>
@@ -20,8 +8,6 @@
 
 <script>
 // @ is an alias to /src
-//import HelloWorld from '@/components/HelloWorld.vue'
-import Manolis from '@/components/Manolis.vue'
 import NavBarNew from '@/components/NavBarNew.vue'
 import Footer from '@/components/Footer.vue'
 
@@ -29,7 +15,7 @@ import Footer from '@/components/Footer.vue'
 export default {
   name: 'Home',
   components: {
-   Manolis, NavBarNew , Footer
+   NavBarNew , Footer
   }
 }
 </script>
