@@ -16,28 +16,28 @@
     <block class="covidfaq">
         <div class="faqcolumn"> <h4>Για τους εργαζόμενους :</h4>
             <div class="accordion">
-                <button type="button" class="accordion__button" v-on:click="expandcontent">Question</button>
-                    <div class="accordion__content">
+                <b-button type="button" class="accordion__button" v-b-toggle.collapse-1>Question</b-button>
+                    <b-collapse id="collapse-1" class="mt-2">
                         <p>
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi minima, autem blanditiis quaerat culpa porro eligendi optio earum? Error, minima. Maiores quo minima aliquam corrupti dolorum ea nulla quos modi!
                         </p>
-                    </div>
-                    <button type="button" class="accordion__button" v-on:click="expandcontent">Question</button>
-                    <div class="accordion__content">
+                    </b-collapse>
+                    <b-button type="button" class="accordion__button" v-b-toggle.collapse-2>Question</b-button>
+                    <b-collapse id="collapse-2" class="mt-2">
                         <p>
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi minima, autem blanditiis quaerat culpa porro eligendi optio earum? Error, minima. Maiores quo minima aliquam corrupti dolorum ea nulla quos modi!
                         </p>
-                    </div>
+                    </b-collapse>
             </div>
         </div>
         <div class="faqcolumn"> <h4>Για τους εργοδότες : </h4>
             <div class="accordion">
-                <button type="button" class="accordion__button" v-on:click="expandcontent">Question</button>
-                    <div class="accordion__content">
+                <b-button type="button" class="accordion__button" v-b-toggle.collapse-3>Question</b-button>
+                    <b-collapse id="collapse-3" class="mt-2">
                         <p>
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi minima, autem blanditiis quaerat culpa porro eligendi optio earum? Error, minima. Maiores quo minima aliquam corrupti dolorum ea nulla quos modi!
                         </p>
-                    </div>
+                    </b-collapse>
             </div>
         </div>
     </block>
@@ -45,25 +45,25 @@
 
     <block id="covid_generalinfo">
         <div class="accordion" id="bottom"> <h4>Γενικές πληροφορίες: </h4>
-                <button type="button" class="accordion__button" v-on:click="expandcontent">Τι είναι ο κορωνοϊός SARS-Cov-19 ;</button>
-                    <div class="accordion__content">
-                        <p>
-                            Animi minima, autem blanditiis quaerat culpa porro eligendi optio earum? Error, minima. Maiores quo minima aliquam corrupti dolorum ea nulla quos modi!
-                        </p>
-                    </div>
-                    <button type="button" class="accordion__button" v-on:click="expandcontent">Question</button>
-                    <div class="accordion__content">
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi minima, autem blanditiis quaerat culpa porro eligendi optio earum? Error, minima. Maiores quo minima aliquam corrupti dolorum ea nulla quos modi!
-                        </p>
-                    </div>
-                    <button type="button" class="accordion__button" v-on:click="expandcontent">Question</button>
-                    <div class="accordion__content">
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi minima, autem blanditiis quaerat culpa porro eligendi optio earum? Error, minima. Maiores quo minima aliquam corrupti dolorum ea nulla quos modi!
-                        </p>
-                    </div>
-            </div>
+                <b-button type="button" class="accordion__button"  v-b-toggle.collapse-4>Τι είναι ο κορωνοϊός SARS-Cov-19 ;</b-button>
+                <b-collapse id="collapse-4" class="mt-2">
+                    <p>
+                        Animi minima, autem blanditiis quaerat culpa porro eligendi optio earum? Error, minima. Maiores quo minima aliquam corrupti dolorum ea nulla quos modi!
+                    </p>
+                </b-collapse>
+                <b-button type="button" class="accordion__button"  v-b-toggle.collapse-5>Question</b-button>
+                <b-collapse id="collapse-5" class="mt-2">
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi minima, autem blanditiis quaerat culpa porro eligendi optio earum? Error, minima. Maiores quo minima aliquam corrupti dolorum ea nulla quos modi!
+                    </p>
+                </b-collapse>
+                <b-button type="button" class="accordion__button" v-b-toggle.collapse-6>Question</b-button>
+                <b-collapse id="collapse-6" class="mt-2">
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi minima, autem blanditiis quaerat culpa porro eligendi optio earum? Error, minima. Maiores quo minima aliquam corrupti dolorum ea nulla quos modi!
+                    </p>
+                </b-collapse>
+        </div>
     </block>
     </div>
 </template>
@@ -71,6 +71,10 @@
 <script>
     
 export default {
+    data() {
+      return {
+      }
+    },
 	methods: {
 		expandcontent() {
             document.querySelectorAll('.accordion__button').forEach(button=>{

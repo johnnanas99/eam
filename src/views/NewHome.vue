@@ -2,9 +2,9 @@
   <div class="NewHome">
 
         <section id="topfold">
-            <a href="#">
+            <router-link to="/covid19">
                 <img id="covid_image" src="https://www.aade.gr/sites/default/files/inline-images/menoume_spiti_01.png">
-            </a>
+            </router-link>
             <div id="covid_info">
             <router-link to="/covid19" class="button"> Κορωνοϊός covid-19: Τι πρέπει να γνωρίζετε</router-link>
                
