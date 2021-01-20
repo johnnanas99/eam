@@ -4,22 +4,20 @@
     <div class="block"  id="covid_instructions">
         <img id="covid_mask" src="https://www.uoi.gr/wp-content/uploads/2020/09/mask-ti-den_post.png">
         
-        <ol>
-            <li> Φοράμε πάντα <strong>μάσκα</strong>.</li>
-            <li> <strong>Πλένουμε συχνά</strong> τα χέρια μας.</li>
-            <li> Lorem ipsum <strong>dolor</strong> sit amet consectetur adipisicing elit. </li>
-            <li> Beatae necessitatibus dicta assumenda <strong>consectetur</strong> aperiam aliquid repellat tempora quibusdam eius.</li>
-            <li>  Impedit, earum laboriosam? Rerum iste accusantium quasi quod sed vitae neque.</li>
-        </ol>
+        <img id="diagram-1" src="@/images/diagram-1.jpg">
         <img src="https://www.civilprotection.gr/sites/default/gscp_uploads/resize/covid/1135-800x800.jpeg">
     </div>
     <div class="covidfaq block">
         <div class="faqcolumn"> <h4>Για τους εργαζόμενους :</h4>
             <div class="accordion">
-                <b-button type="button" class="accordion__button" v-b-toggle.collapse-1>Question</b-button>
+                <b-button type="button" class="accordion__button" v-b-toggle.collapse-1>Τι επιλογές έχω για <strong>ασφαλές περιβάλλον εργασίας</strong>; </b-button>
                     <b-collapse id="collapse-1" class="mt-2">
                         <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi minima, autem blanditiis quaerat culpa porro eligendi optio earum? Error, minima. Maiores quo minima aliquam corrupti dolorum ea nulla quos modi!
+                            Για τους ενεργούς εργαζομένους (δεν έχουν δηλωθεί σε αναστολή ή άδεια ειδικού σκοπού), υπάρχει η επιλογή της <strong>τηλεργασίας</strong>, της <strong>εκ περιτροπής</strong> εργασίας και της <strong>εργασίας με βάρδιες</strong>.
+                            <br>
+                            Ο εργαζόμενος έχει προσωπική ευθύνη να τηρεί τις οδηγίες ασφαλείας και να υποδεικνύει τις καταπατήσεις στον και από τον χώρο εργασίας του (άτυπα ή τυπικά).
+                            <br><br>
+                            Κάθε επιλογή πρέπει να γίνεται <strong>σε συνεννοήση με τον χώρο εργασίας</strong> του.
                         </p>
                     </b-collapse>
                     <b-button type="button" class="accordion__button" v-b-toggle.collapse-2>Question</b-button>
@@ -32,11 +30,20 @@
         </div>
         <div class="faqcolumn"> <h4>Για τους εργοδότες : </h4>
             <div class="accordion">
-                <b-button type="button" class="accordion__button" v-b-toggle.collapse-3>Question</b-button>
+                <b-button type="button" class="accordion__button" v-b-toggle.collapse-3>Θέλω να δηλώσω <strong>άδεια ειδικού σκοπού</strong> εργαζομένου.</b-button>
                     <b-collapse id="collapse-3" class="mt-2">
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi minima, autem blanditiis quaerat culpa porro eligendi optio earum? Error, minima. Maiores quo minima aliquam corrupti dolorum ea nulla quos modi!
-                        </p>
+                        <router-link to='/day_off'><button>
+                            Δήλωση άδειας ειδικού σκοπού
+                        </button></router-link>
+                    </b-collapse>
+            </div>
+
+            <div class="accordion">
+                <b-button type="button" class="accordion__button" v-b-toggle.remote>Θέλω να δηλώσω εργαζόμενο για <strong>εξ αποστάσεως εργασία</strong>.</b-button>
+                    <b-collapse id="remote" class="mt-2">
+                        <router-link to='/remote'><button>
+                            Δήλωση τηλεργασίας
+                        </button></router-link>
                     </b-collapse>
             </div>
         </div>

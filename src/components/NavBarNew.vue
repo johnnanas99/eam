@@ -15,7 +15,7 @@
 					<div>
 						<b-dropdown-item href="#">Αναζήτηση αρχείου εργαζομένου</b-dropdown-item>
 						<b-dropdown-item href="#">Αιτήσεις και έντυπα</b-dropdown-item>
-						<b-dropdown-item href="#">Covid-19</b-dropdown-item>
+						<b-dropdown-item href="#/covid19">Covid19</b-dropdown-item>
 					</div>
 				</b-nav-item-dropdown>
 				<b-nav-item-dropdown
