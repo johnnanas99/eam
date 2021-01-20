@@ -5,13 +5,17 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    user : {
-      name: ""
+    user: {
+      firstName: null,
+      lastName: null,
+      person_id: null,
+      email: null,
+      phone: null
     }
   },
   mutations: {
-    changeusername(state,newname){
-      state.user.name = newname;
+    getuser(state,newuser){
+      state.user = newuser;
       // HOWTO use it
       // this.$store.commit("changeusername","HA")
     }
