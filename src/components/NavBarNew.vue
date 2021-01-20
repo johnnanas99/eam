@@ -2,7 +2,6 @@
 	<div>
 		<b-navbar toggleable="lg" type="dark" variant="info">
 			<b-navbar-brand href="#">
-				<!-- <i class="fas fa-plus">EAM</i> -->
 				<router-link to="/">
 					<img src="https://artandcultureprofessionals.services.gov.gr/MainLogoArt.gif" alt="logo" width="220px">
 				</router-link> |
@@ -14,14 +13,20 @@
 				<b-nav-item-dropdown href="#" text="Εργαζόμενοι">
 					<div>
 						<b-dropdown-item href="#">Αναζήτηση αρχείου εργαζομένου</b-dropdown-item>
-						<b-dropdown-item href="#">Αιτήσεις και έντυπα</b-dropdown-item>
+						<b-dropdown-item href="#/forms">Αιτήσεις και έντυπα</b-dropdown-item>
 						<b-dropdown-item href="#/covid19">Covid19</b-dropdown-item>
 					</div>
 				</b-nav-item-dropdown>
 				<b-nav-item-dropdown
 					href="#"
-					text="Εργοδότες"
-				></b-nav-item-dropdown>
+					text="Εργοδότες">
+					<div>
+						<b-dropdown-item href="#">Έλεγχος κατάστασης επιχείρησης</b-dropdown-item>
+						<b-dropdown-item href="#/forms">Αιτήσεις και έντυπα</b-dropdown-item>
+						<b-dropdown-item href="#/covid19">Covid19</b-dropdown-item>
+					</div>
+				</b-nav-item-dropdown>
+				
 				<b-nav-item-dropdown
 					href="#"
 					text="Άνεργοι"
@@ -69,12 +74,10 @@ export default {
 </script>
 
 <style scoped>
-
 img {
 	height:auto;
 	border-radius: 50px;
 }
-
 /*.icon {
 	color: white;
 }*/
@@ -85,24 +88,19 @@ img {
 	/*box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);*/
 	padding: 10px;
 }
-
 /*.b-navbar-nav{
 	color: whitesmoke;
 }*/
-
 b-nav-item-dropdown.text{
 	color:whitesmoke;
 }
-
 b-navbar{
 	font-size:20px;
 	background: #019da8;
 	padding: 20px;
 	display: flex;
 	justify-content: space-between;
-
 }
-
 .rcorner_top{
 	/*display: inline;
 	text-align: center;*/
