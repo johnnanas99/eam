@@ -39,10 +39,19 @@
       }
     },
     methods: {
-      onSubmit(event) {
+      async onSubmit(event) {
         event.preventDefault()
         // Login function
-        alert("Σύνδεση επιτυχής!")
+        const { data } = await this.$axios.post('/login', this.form);
+        if(data.status == 500){
+          alert("Κάτι πήγε στραβά. Δοκιμάστε ξανά αργότερα!");
+          return;
+        }else if(data.status == 404){
+          alert("Το ΑΦΜ ή ο κωδικός είναι λάθος!");
+          return;
+        }
+        this.$store.commit("getuser",data.user);
+        alert("Καλώς ήρθες " + data.user.firstName + " " + data.user.lastName + "!");
       },
       onReset(event) {
         event.preventDefault()
