@@ -8,6 +8,7 @@ import Rendezvous from '@/views/Rendezvous.vue'
 import NewHome from '@/views/NewHome.vue'
 import Covid19 from '@/views/Covid19.vue'
 import Dayoff from '@/views/Dayoff.vue'
+import Remote from '@/views/Remote.vue'
 
 Vue.use(VueRouter)
 
@@ -54,6 +55,11 @@ const routes = [
     path: '/day_off',
     name: 'Day_off',
     component: Dayoff
+  },
+  {
+    path: '/remote',
+    name: 'Remote',
+    component: Remote
   }
 ]
 
