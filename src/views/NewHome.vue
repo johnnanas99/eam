@@ -68,12 +68,15 @@ li{
 	max-width: 500px;
 }
 
-h2, .h2, a.ol{
+h2, .h2, ol a{
     color:#2c3e50;
-	padding: 5px;
-    padding-left: 25px;
-	
 }
+
+h2, .h2{
+	padding: 5px;
+	padding-left: 25px;
+}
+	
 #home_image{
 	width:300px;
 	height:auto;
