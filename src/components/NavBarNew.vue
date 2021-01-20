@@ -34,11 +34,11 @@
 				<b-nav-item-dropdown href="#" text="Γενικά">
 					<div>
 						<b-dropdown-item href="#">Ανακοινώσεις</b-dropdown-item>
-						<b-dropdown-item href="#">Αιτήσεις και έντυπα</b-dropdown-item>
+						<b-dropdown-item href="#/forms">Αιτήσεις και έντυπα</b-dropdown-item>
 						<b-dropdown-item href="#">Εγκύκλιοι και γενικά θέματα</b-dropdown-item>
 						<b-dropdown-item href="#">Διεθνή θέματα</b-dropdown-item>
 						<b-dropdown-item href="#">Συχνές ερωτήσεις</b-dropdown-item>
-						<b-dropdown-item href="#">Επικοινωνία/Αναφορά σφάλματος</b-dropdown-item>
+						<b-dropdown-item href="#/contact">Επικοινωνία/Αναφορά σφάλματος</b-dropdown-item>
 					</div>
 
 				</b-nav-item-dropdown>
