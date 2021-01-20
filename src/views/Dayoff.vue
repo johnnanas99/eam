@@ -1,18 +1,18 @@
 <template>
   <div>
-    <p> Hello there! </p>
+    <Dayoff/>
   </div>
 </template>
 
 
 <script>
 // @ is an alias to /src
-// import Register from '@/components/Register.vue'
+import Dayoff from '@/components/Dayoff.vue'
 
 export default {
-  name: 'About',
+  name: 'day_off',
   components: {
-    // Register
+    Dayoff 
   }
 }
 </script>
