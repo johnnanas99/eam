@@ -1,128 +1,87 @@
 <template>
     <div id="covid">
     <h4>Γενικές οδηγίες ασφαλείας κατά του covid-19</h4>
-    <block  id="covid_instructions">
+    <div class="block"  id="covid_instructions">
         <img id="covid_mask" src="https://www.uoi.gr/wp-content/uploads/2020/09/mask-ti-den_post.png">
         
-        <ol>
-            <li> Φοράμε πάντα <strong>μάσκα</strong>.</li>
-            <li> <strong>Πλένουμε συχνά</strong> τα χέρια μας.</li>
-            <li> Lorem ipsum <strong>dolor</strong> sit amet consectetur adipisicing elit. </li>
-            <li> Beatae necessitatibus dicta assumenda <strong>consectetur</strong> aperiam aliquid repellat tempora quibusdam eius.</li>
-            <li>  Impedit, earum laboriosam? Rerum iste accusantium quasi quod sed vitae neque.</li>
-        </ol>
+        <img id="diagram-1" src="@/images/diagram-1.jpg">
         <img src="https://www.civilprotection.gr/sites/default/gscp_uploads/resize/covid/1135-800x800.jpeg">
-    </block>
-    <block class="covidfaq">
+    </div>
+    <div class="covidfaq block">
         <div class="faqcolumn"> <h4>Για τους εργαζόμενους :</h4>
             <div class="accordion">
-                <button type="button" class="accordion__button" v-on:click="expandcontent">Question</button>
-                    <div class="accordion__content">
+                <b-button type="button" class="accordion__button" v-b-toggle.collapse-1>Τι επιλογές έχω για <strong>ασφαλές περιβάλλον εργασίας</strong>; </b-button>
+                    <b-collapse id="collapse-1" class="mt-2">
+                        <p>
+                            Για τους ενεργούς εργαζομένους (δεν έχουν δηλωθεί σε αναστολή ή άδεια ειδικού σκοπού), υπάρχει η επιλογή της <strong>τηλεργασίας</strong>, της <strong>εκ περιτροπής</strong> εργασίας και της <strong>εργασίας με βάρδιες</strong>.
+                            <br>
+                            Ο εργαζόμενος έχει προσωπική ευθύνη να τηρεί τις οδηγίες ασφαλείας και να υποδεικνύει τις καταπατήσεις στον και από τον χώρο εργασίας του (άτυπα ή τυπικά).
+                            <br><br>
+                            Κάθε επιλογή πρέπει να γίνεται <strong>σε συνεννοήση με τον χώρο εργασίας</strong> του.
+                        </p>
+                    </b-collapse>
+                    <b-button type="button" class="accordion__button" v-b-toggle.collapse-2>Question</b-button>
+                    <b-collapse id="collapse-2" class="mt-2">
                         <p>
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi minima, autem blanditiis quaerat culpa porro eligendi optio earum? Error, minima. Maiores quo minima aliquam corrupti dolorum ea nulla quos modi!
                         </p>
-                    </div>
-                    <button type="button" class="accordion__button" v-on:click="expandcontent">Question</button>
-                    <div class="accordion__content">
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi minima, autem blanditiis quaerat culpa porro eligendi optio earum? Error, minima. Maiores quo minima aliquam corrupti dolorum ea nulla quos modi!
-                        </p>
-                    </div>
+                    </b-collapse>
             </div>
         </div>
         <div class="faqcolumn"> <h4>Για τους εργοδότες : </h4>
             <div class="accordion">
-                <button type="button" class="accordion__button" v-on:click="expandcontent">Question</button>
-                    <div class="accordion__content">
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi minima, autem blanditiis quaerat culpa porro eligendi optio earum? Error, minima. Maiores quo minima aliquam corrupti dolorum ea nulla quos modi!
-                        </p>
-                    </div>
+                <b-button type="button" class="accordion__button" v-b-toggle.collapse-3>Θέλω να δηλώσω <strong>άδεια ειδικού σκοπού</strong> εργαζομένου.</b-button>
+                    <b-collapse id="collapse-3" class="mt-2">
+                        <router-link to='/day_off'><button>
+                            Δήλωση άδειας ειδικού σκοπού
+                        </button></router-link>
+                    </b-collapse>
+            </div>
+
+            <div class="accordion">
+                <b-button type="button" class="accordion__button" v-b-toggle.remote>Θέλω να δηλώσω εργαζόμενο για <strong>εξ αποστάσεως εργασία</strong>.</b-button>
+                    <b-collapse id="remote" class="mt-2">
+                        <router-link to='/remote'><button>
+                            Δήλωση τηλεργασίας
+                        </button></router-link>
+                    </b-collapse>
             </div>
         </div>
-    </block>
+    </div>
 
 
-    <block id="covid_generalinfo">
+    <div class="block" id="covid_generalinfo">
         <div class="accordion" id="bottom"> <h4>Γενικές πληροφορίες: </h4>
-                <button type="button" class="accordion__button" v-on:click="expandcontent">Τι είναι ο κορωνοϊός SARS-Cov-19 ;</button>
-                    <div class="accordion__content">
-                        <p>
-                            Animi minima, autem blanditiis quaerat culpa porro eligendi optio earum? Error, minima. Maiores quo minima aliquam corrupti dolorum ea nulla quos modi!
-                        </p>
-                    </div>
-                    <button type="button" class="accordion__button" v-on:click="expandcontent">Question</button>
-                    <div class="accordion__content">
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi minima, autem blanditiis quaerat culpa porro eligendi optio earum? Error, minima. Maiores quo minima aliquam corrupti dolorum ea nulla quos modi!
-                        </p>
-                    </div>
-                    <button type="button" class="accordion__button" v-on:click="expandcontent">Question</button>
-                    <div class="accordion__content">
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi minima, autem blanditiis quaerat culpa porro eligendi optio earum? Error, minima. Maiores quo minima aliquam corrupti dolorum ea nulla quos modi!
-                        </p>
-                    </div>
-            </div>
-    </block>
+                <b-button type="button" class="accordion__button"  v-b-toggle.collapse-4>Τι είναι ο κορωνοϊός SARS-Cov-19 ;</b-button>
+                <b-collapse id="collapse-4" class="mt-2">
+                    <p>
+                        Animi minima, autem blanditiis quaerat culpa porro eligendi optio earum? Error, minima. Maiores quo minima aliquam corrupti dolorum ea nulla quos modi!
+                    </p>
+                </b-collapse>
+                <b-button type="button" class="accordion__button"  v-b-toggle.collapse-5>Question</b-button>
+                <b-collapse id="collapse-5" class="mt-2">
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi minima, autem blanditiis quaerat culpa porro eligendi optio earum? Error, minima. Maiores quo minima aliquam corrupti dolorum ea nulla quos modi!
+                    </p>
+                </b-collapse>
+                <b-button type="button" class="accordion__button" v-b-toggle.collapse-6>Question</b-button>
+                <b-collapse id="collapse-6" class="mt-2">
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi minima, autem blanditiis quaerat culpa porro eligendi optio earum? Error, minima. Maiores quo minima aliquam corrupti dolorum ea nulla quos modi!
+                    </p>
+                </b-collapse>
+        </div>
+    </div>
     </div>
 </template>
 
 <script>
-    
 export default {
-	methods: {
-		expandcontent() {
-            document.querySelectorAll('.accordion__button').forEach(button=>{
-            button.addEventListener('click',()=>{
-                const accordionContent = button.nextElementSibling;
-
-                button.classList.toggle('accordion__button--active');
-
-                if (button.classList.contains('accordion__button--active')){
-                    accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-                } else {
-                    accordionContent.style.maxHeight = 0;
-                }
-            });
-           });
-           
-	    }
+    data() {
+      return {
+      }
     }
 }
-/*export default {
-    methods: {
-        expandcontent() {
-            const accordionContent = button.nextElementSibling;
-            button.classList.toggle('accordion__button--active');
-            if (button.classList.contains('accordion__button--active')){
-                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-            } else {
-                accordionContent.style.maxHeight = 0;
-            }
-        }
-    }
-}*/
-
-/*export default {
-    data () {
-        return {
-            clicked : false
-        }
-    },
-    methods: {
-        expandcontent() {
-
-            if (this.clicked == false){
-                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-                clicked = true;
-            } else {
-                accordionContent.style.maxHeight = 0;
-                clicked = false;
-            }
-        }
-    }
-}*/
 </script>
 
 <style scoped>
@@ -163,7 +122,7 @@ export default {
        
    }
 
-    block{
+    .block{
         padding: 50px 20px 30px;
         justify-content:space-around;
         display: flex;

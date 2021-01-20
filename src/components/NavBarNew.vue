@@ -15,7 +15,7 @@
 					<div>
 						<b-dropdown-item href="#">Αναζήτηση αρχείου εργαζομένου</b-dropdown-item>
 						<b-dropdown-item href="#">Αιτήσεις και έντυπα</b-dropdown-item>
-						<b-dropdown-item href="#">Covid-19</b-dropdown-item>
+						<b-dropdown-item href="#/covid19">Covid19</b-dropdown-item>
 					</div>
 				</b-nav-item-dropdown>
 				<b-nav-item-dropdown
@@ -57,12 +57,12 @@
 				>
 			</b-dropdown>
 			<div class="rcorner_top">
-				<a href="login.html">Σύνδεση </a>
+				<router-link to="/login">Σύνδεση </router-link>
 				 // 
 				<router-link to="/register">Εγγραφή</router-link>
-				<a href="contact.html">
+				<router-link to="/contact">
 					<img class="icon" src="https://p7.hiclipart.com/preview/826/886/420/iphone-computer-icons-telephone-call-phone-call-icon.jpg">
-		        </a>
+				</router-link>
 			</div>
 		</b-navbar>
 			
