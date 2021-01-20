@@ -5,7 +5,7 @@
         <b-form-input
           id="firstname-input"
           v-model="form.firstname"
-          placeholder="Πληκτρολογίστε το όνομα σας"
+          placeholder="Πληκτρολογήστε το όνομα σας"
           required
         ></b-form-input>
       </b-form-group>
@@ -14,7 +14,7 @@
         <b-form-input
           id="lastname-input"
           v-model="form.lastname"
-          placeholder="Πληκτρολογίστε το επώνυμο σας"
+          placeholder="Πληκτρολογήστε το επώνυμο σας"
           required
         ></b-form-input>
       </b-form-group>
@@ -23,7 +23,7 @@
         <b-form-input
           id="afm-input"
           v-model="form.afm"
-          placeholder="Πληκτρολογίστε το ΑΦΜ"
+          placeholder="Πληκτρολογήστε το ΑΦΜ"
         ></b-form-input>
       </b-form-group>
 
@@ -32,7 +32,7 @@
           id="email-input"
           v-model="form.email"
           type="email"
-          placeholder="Πληκτρολογίστε το email σας"
+          placeholder="Πληκτρολογήστε το email σας"
         ></b-form-input>
       </b-form-group>
 
@@ -48,7 +48,7 @@
         <b-form-datepicker id="datepicker" v-model="form.date" class="mb-2" @input="times"></b-form-datepicker>
       </b-form-group>
 
-      <b-form-group id="time" label="Ώρα ραντευού:" label-for="time-input">
+      <b-form-group id="time" label="Ώρα ραντεβού:" label-for="time-input">
         <b-form-select
           id="time-input"
           v-model="form.time"
@@ -89,7 +89,7 @@
           alert("Κάτι πήγε στραβά, παρακαλώ προσπαθήστε αργότερα!");
           return;
         }
-        alert("Το ραντευού κανονίνιστηκε για τις " + this.form.date + " " + this.form.time + "!");
+        alert("Το ραντεβού κανονίνιστηκε για τις " + this.form.date + " " + this.form.time + "!");
         this.form.date = null;
         this.form.time = null;
         this.alltimes = null;
@@ -157,6 +157,7 @@
   background-color : #E5E5E5;
   border-radius: 60px;
   width: 35%;
+  margin-bottom: 50px;
 }
 
 #submit {

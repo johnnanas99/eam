@@ -142,6 +142,7 @@
   background-color : #E5E5E5;
   border-radius: 60px;
   width: 35%;
+  margin-bottom: 50px;
 }
 
 #submit {
