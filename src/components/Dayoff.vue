@@ -116,7 +116,7 @@
       onReset(event) {
         event.preventDefault()
         // Reset our form values
-        this.form.name = ''
+        this.form.firstname = ''
         this.form.lastname = ''
         this.form.afm = ''
         this.form.email = ''
