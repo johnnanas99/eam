@@ -36,7 +36,7 @@
             </div>
 	</section>
     
-    <block id="bottomfold">
+    <section id="bottomfold">
         <h2>Ανακοινώσεις</h2>
         <ul>
             <li> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus nostrum, unde magnam impedit voluptatem, illo, laborum quae doloribus animi saepe reiciendis modi explicabo! Accusantium repellendus voluptas architecto at rem earum.</li>
@@ -45,7 +45,7 @@
             <li> </li>
             <li> </li>
         </ul>
-    </block>
+    </section>
   </div>
 </template>
 
@@ -92,7 +92,7 @@ h2, .h2, a.ol{
 
 section{
 	padding: 50px 20px 30px;
-	justify-content: space-between;
+	justify-content: space-evenly;
 }
 
 #topfold{
@@ -100,7 +100,6 @@ section{
 }
 
 #bottomfold{
-    padding-left:150px;
     text-align: left;
 }
 
