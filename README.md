@@ -1,5 +1,7 @@
 # eam
 
+University Assignment.
+
 ## Project setup
 ```
 npm install
